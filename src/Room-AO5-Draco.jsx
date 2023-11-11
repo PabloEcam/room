@@ -122,7 +122,7 @@ export default function Model({isActive = true, ...props}) {
 
   return (
     <group {...props} dispose={null}>
-    <pointLight  ref={refLampLight} intensity={12} position={[-0.318, 1.7, -1.317]} color='#FF0000'/>
+ {/*    <pointLight  ref={refLampLight} intensity={12} position={[-0.318, 1.7, -1.317]} color='#FF0000'/> */}
  
 
 {/*     <mesh ref={refEmissivePlane} position={[-2, 2.382, 0.535]} rotation={[0 , Math.PI / 2  , 0 ]}>
@@ -157,13 +157,15 @@ export default function Model({isActive = true, ...props}) {
       <mesh castShadow receiveShadow geometry={nodes.Cylinder003.geometry} material={materials.BasicTable} position={[1.032, 0.6, -0.48]} rotation={[Math.PI / 2, 0, 0]} />
       <mesh castShadow receiveShadow geometry={nodes.Cylinder004.geometry} material={materials.BasicTable} position={[1.032, 0.363, -0.48]} rotation={[Math.PI / 2, 0, 0]} />
       <mesh ref={refWindowFrame} castShadow receiveShadow geometry={nodes.WindowFrame.geometry} material={materials.BasicWindow} position={[-1.88, 2.382, 0.535]} />
-      <mesh ref={refUpperWindow} castShadow receiveShadow geometry={nodes.UpperWindow.geometry} material={materials.BasicWindow} position={[-2.072, 2.382, 0.535]} />
-      <mesh ref={refLowerWindow} castShadow receiveShadow geometry={nodes.LowerWindow.geometry} material={materials.BasicWindow} position={[-2.136, 1.316, 0.535]} />
+      <mesh ref={refUpperWindow} castShadow receiveShadow geometry={nodes.UpperWindow.geometry} material={materials.BasicWindow} position={[-2.072, 2.382, 0.535]} /> 
+    <mesh ref={refLowerWindow} castShadow receiveShadow geometry={nodes.LowerWindow.geometry} material={materials.BasicWindow} position={[-2.136, 1.316, 0.535]} />  
       <mesh ref={refShade} castShadow receiveShadow geometry={nodes.Shade.geometry} material={materials.BasicWindow} position={[-1.801, 2.382, 0.535]} />
-      <mesh ref={refShadeDown} castShadow receiveShadow geometry={nodes.ShadeDown.geometry} material={materials.BasicWindow} position={[-1.801, 2.176, 0.535]} rotation={[Math.PI / 2, -Math.PI / 2, 0]} />
-      <mesh ref={refShadeUp} castShadow receiveShadow geometry={nodes.ShadeUp.geometry} material={materials.BasicWindow} position={[-1.801, 3.42, 0.535]} rotation={[Math.PI / 2, -Math.PI / 2, 0]} />
-      <mesh ref={refLowerGlass} castShadow receiveShadow geometry={nodes.LowerWindowGlass.geometry} material={materials.BasicWindow} position={[-2.136, 1.316, 0.535]} />
-      <mesh ref={refUpperGlass} castShadow receiveShadow geometry={nodes.UpperWindowGlass.geometry} material={materials.BasicWindow} position={[-2.072, 2.382, 0.535]} />
+       <mesh ref={refShadeDown} castShadow receiveShadow geometry={nodes.ShadeDown.geometry} material={materials.BasicWindow} position={[-1.801, 2.176, 0.535]} rotation={[Math.PI / 2, -Math.PI / 2, 0]} />
+      <mesh ref={refShadeUp} castShadow receiveShadow geometry={nodes.ShadeUp.geometry} position={[-1.801, 3.42, 0.535]} rotation={[Math.PI / 2, -Math.PI / 2, 0]} >
+      <meshBasicMaterial color='#f0e2bd' />
+      </mesh>
+    <mesh ref={refLowerGlass} castShadow receiveShadow geometry={nodes.LowerWindowGlass.geometry} material={materials.BasicWindow} position={[-2.136, 1.316, 0.535]} /> 
+    <mesh ref={refUpperGlass} castShadow receiveShadow geometry={nodes.UpperWindowGlass.geometry} material={materials.BasicWindow} position={[-2.072, 2.382, 0.535]} />
       <mesh ref={refLampShade} castShadow receiveShadow geometry={nodes.LampShade.geometry} material={materials.BasicLamp} position={[-0.318, 1.907, -1.317]} rotation={[Math.PI / 2, 0, 0.623]} />
       <mesh castShadow receiveShadow geometry={nodes.LightBulb.geometry} material={materials.BasicLamp} position={[-0.318, 1.816, -1.318]} rotation={[Math.PI / 2, 0, 0.623]} />
       <mesh ref={refRabbitLamp}castShadow receiveShadow geometry={nodes.RabbitStraight.geometry} material={materials.BasicLamp} position={[-0.342, 1.493, -1.284]} rotation={[Math.PI / 2, 0, 0.623]} />
